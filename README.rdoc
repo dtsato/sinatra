@@ -425,6 +425,21 @@ also works with:
     ...
   
   end
+
+=== RSpec
+
+  require 'my_sinatra_app'
+  require 'sinatra/test/rspec'
+
+  describe 'My app'
+
+    it "should show a default page" do
+      response = get_it '/'
+      response.body.should == 'My Default Page!'
+    end
+    ...
+
+  end
   
 == Test helpers
 
